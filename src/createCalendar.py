@@ -20,5 +20,5 @@ def createCalendar(dividends):
         e.make_all_day
         c.events.add(e)
 
-    with open("./dividends.ics", 'w') as f:
+    with open("dividends.ics", 'w') as f:
         f.writelines(c)
