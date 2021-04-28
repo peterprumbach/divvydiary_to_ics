@@ -1,0 +1,9 @@
+# Credentials #
+config.json
+
+# Python #
+__pycache__
+*.pyc
+
+# auto generated output #
+*.ics
