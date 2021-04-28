@@ -5,12 +5,12 @@ import json
 # Create API-key file if not exist
 def createAPIFile():
     jsonString = {'apiKey': 'insert here'}
-    json.dump(jsonString, open(os.getcwd() + "config.json", 'w'))
+    json.dump(jsonString, open(os.getcwd() + "/config.json", 'w'))
 
 # Check if API-key file exists
 def apiKeyExists():
-    if(os.path.isfile(os.getcwd() + "config.json")):
-        with open(os.getcwd() + "config.json", 'r') as config:
+    if(os.path.isfile(os.getcwd() + "/config.json")):
+        with open(os.getcwd() + "/config.json", 'r') as config:
             apiFile=config.read()
 
         apiKey = json.loads(apiFile)
@@ -25,7 +25,7 @@ def apiKeyExists():
 # Get API-key from config file
 def getAPIKey():
     if(apiKeyExists()):
-        with open(os.getcwd() + "config.json", 'r') as config:
+        with open(os.getcwd() + "/config.json", 'r') as config:
             apiFile=config.read()
 
         apiKey = json.loads(apiFile)
